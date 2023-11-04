@@ -18,7 +18,6 @@
   max-width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
-  padding-top: 28px;
   padding-bottom: 256px;
 }
 
@@ -60,12 +59,16 @@
 }
 
 .header {
+  padding-top: 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 29px;
 }
 .header-tablet {
+  display: none;
+}
+.header-mobile {
   display: none;
 }
 .header__wrapper {
@@ -77,6 +80,11 @@
   display: flex;
   align-items: center;
   gap: 12.5px;
+}
+.header__link {
+  display: block;
+  width: 156.198px;
+  height: 60px;
 }
 
 .nav {
@@ -231,11 +239,19 @@
     display: none;
   }
   .header-tablet {
-    display: block;
+    padding-top: 30px;
     padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .header-mobile {
+    display: none;
+  }
+  .header__link {
+    display: block;
+    width: 156.198px;
+    height: 60px;
   }
   .button-prime {
     width: 201.5px;
@@ -256,10 +272,62 @@
   .content {
     padding-top: 44px;
   }
+  .content__title {
+    margin-bottom: 40px;
+  }
   .content__cards {
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 20px;
          column-gap: 20px;
     row-gap: 20px;
+  }
+}
+@media (max-width: 376px) {
+  .center {
+    padding-left: 15px;
+    padding-right: 17px;
+  }
+  .header-tablet {
+    display: none;
+  }
+  .header-mobile {
+    padding-top: 15px;
+    padding-bottom: 18px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__link {
+    display: block;
+    width: 112.5px;
+    height: 38.413px;
+  }
+  .top__content {
+    height: 495px;
+    padding-bottom: 52px;
+  }
+  .top__content_text {
+    width: 293px;
+    font-size: 14px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .button-mobile {
+    width: 219.829px;
+    height: 46.689px;
+  }
+  .content {
+    padding-top: 48px;
+  }
+  .content__title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .content__cards {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

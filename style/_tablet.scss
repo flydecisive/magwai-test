@@ -8,11 +8,21 @@
         display: none;
 
         &-tablet {
-            display: block;
+            padding-top: 30px;
             padding-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        &-mobile {
+            display: none;
+        }
+    
+        &__link {
+            display: block;
+            width: 156.198px;
+            height: 60px;
         }
     }
 
@@ -43,6 +53,10 @@
 
     .content {
         padding-top: 44px;
+
+        &__title {
+            margin-bottom: 40px;
+        }
 
         &__cards {
             grid-template-columns: repeat(2, 1fr);
