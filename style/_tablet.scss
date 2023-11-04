@@ -13,16 +13,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        &-mobile {
-            display: none;
+            position: relative;
         }
     
         &__link {
             display: block;
             width: 156.198px;
             height: 60px;
+        }
+    }
+
+    .nav {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 15px;
+        align-items: flex-start;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        padding-top: 59px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100vh;
+        background-color: $main-background-color;
+        z-index: 3;
+
+        &__item {
+            font-family: Montserrat;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
         }
     }
 

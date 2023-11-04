@@ -94,7 +94,12 @@
         display: block;
         width: 156.198px;
         height: 60px;
+        flex-shrink: 0;
     }
+}
+
+.menu {
+    display: none;
 }
 
 .nav {

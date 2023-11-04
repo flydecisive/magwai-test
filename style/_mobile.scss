@@ -38,11 +38,43 @@
         }
     }
 
+    .nav {
+        top: 71px;
+        padding-bottom: 21px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        height: calc(100vh - 71px);
+
+        &__wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 15px;
+            list-style-type: none;
+        }
+
+        &__item {
+            font-size: 20px;
+        }
+
+        &__buttons {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 6px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
     .title {
         font-size: 20px;
     }
 
     .button {
+        &-prime, &__phone {
+            width: 100%;
+            height: 60px;
+        }
+
         &-mobile {
             width: 219.829px;
             height: 46.689px;
