@@ -96,6 +96,11 @@
         height: 60px;
         flex-shrink: 0;
     }
+
+    &__logo {
+        width: 156.198px;
+        height: 60px;
+    }
 }
 
 .menu {
@@ -126,6 +131,10 @@
             color: $nav-hover-text-color;
         }
     }
+}
+
+.hidden {
+    display: none;
 }
 
 .button {

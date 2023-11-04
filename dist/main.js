@@ -15,7 +15,7 @@
   \*****************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://magwai-test/./main.js?");
+eval("const burgerElems = document.querySelectorAll(\".burger\");\r\n\r\nif (burgerElems) {\r\n  burgerElems.forEach((elem) =>\r\n    elem.addEventListener(\"click\", (e) => {\r\n      handleEvent(e);\r\n    })\r\n  );\r\n}\r\n\r\nfunction handleEvent(e) {\r\n  const target = e.target.parentElement;\r\n\r\n  if (target.classList.contains(\"burger-mobile\")) {\r\n    const mobileNavElement = document.querySelector(\".nav-mobile\");\r\n    if (mobileNavElement.classList.contains(\"hidden\")) {\r\n      mobileNavElement.classList.remove(\"hidden\");\r\n    } else {\r\n      mobileNavElement.classList.add(\"hidden\");\r\n    }\r\n  }\r\n\r\n  if (target.classList.contains(\"burger-tablet\")) {\r\n    const tabletNavElement = document.querySelector(\".nav-tablet\");\r\n    if (tabletNavElement.classList.contains(\"hidden\")) {\r\n      tabletNavElement.classList.remove(\"hidden\");\r\n    } else {\r\n      tabletNavElement.classList.add(\"hidden\");\r\n    }\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://magwai-test/./main.js?");
 
 /***/ })
 

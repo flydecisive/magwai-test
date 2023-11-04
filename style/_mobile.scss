@@ -24,6 +24,15 @@
             width: 112.5px;
             height: 38.413px; 
         }
+
+        &__logo {
+            width: 112.5px;
+            height: 38.413px; 
+        }
+    }
+
+    .hidden {
+        display: none;
     }
 
     .top {
@@ -78,6 +87,11 @@
         &-mobile {
             width: 219.829px;
             height: 46.689px;
+
+            &::after {
+                content: '';
+                height: 46.689px;
+            }
         }
 
         &__nav {

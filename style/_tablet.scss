@@ -47,6 +47,10 @@
         }
     }
 
+    .hidden {
+        display: none;
+    }
+
     .button {
         &-prime {
             width: calc(201.5px - 26px);

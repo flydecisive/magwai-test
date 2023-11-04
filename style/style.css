@@ -87,6 +87,10 @@
   height: 60px;
   flex-shrink: 0;
 }
+.header__logo {
+  width: 156.198px;
+  height: 60px;
+}
 
 .menu {
   display: none;
@@ -113,6 +117,10 @@
 .nav__item:hover {
   transition: all 0.3s;
   color: #C2AB81;
+}
+
+.hidden {
+  display: none;
 }
 
 .button {
@@ -290,6 +298,9 @@
     font-weight: 700;
     line-height: 150%;
   }
+  .hidden {
+    display: none;
+  }
   .button-prime {
     width: 175.5px;
   }
@@ -340,6 +351,13 @@
     width: 112.5px;
     height: 38.413px;
   }
+  .header__logo {
+    width: 112.5px;
+    height: 38.413px;
+  }
+  .hidden {
+    display: none;
+  }
   .top__content {
     height: 495px;
     padding-bottom: 52px;
@@ -380,6 +398,10 @@
   }
   .button-mobile {
     width: 219.829px;
+    height: 46.689px;
+  }
+  .button-mobile::after {
+    content: "";
     height: 46.689px;
   }
   .button__nav-mobile::after {
