@@ -1,0 +1,15 @@
+{
+  "name": "magwai-test",
+  "version": "1.0.0",
+  "description": "Тестовое задание в компанию Магвай",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
