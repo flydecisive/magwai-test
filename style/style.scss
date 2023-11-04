@@ -70,6 +70,10 @@
     align-items: center;
     padding-bottom: 29px;
 
+    &-tablet {
+        display: none;
+    }
+
     &__wrapper {
         display: flex;
         gap: 42px;
@@ -153,10 +157,10 @@
     }
 
     &__cards {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between; 
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 30px;
         row-gap: 30px;
     }
 
@@ -167,7 +171,7 @@
 }
 
 .card {
-    width: 320px;
+    // width: 320px;
     box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
@@ -247,5 +251,6 @@
     }
 }
 
+@import 'tablet';
 
 

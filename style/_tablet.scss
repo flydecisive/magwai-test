@@ -1,0 +1,53 @@
+@media (max-width: 769px) {
+    .center {
+        padding-left: 49px;
+        padding-right: 49px;
+    }
+
+    .header {
+        display: none;
+
+        &-tablet {
+            display: block;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .button {
+        &-prime {
+            width: 201.5px;
+        }
+
+        &-tablet {
+            width: 282.5px;
+        }
+    }
+
+    .top {
+        &__content {
+            height: 907px;
+            padding-bottom: 76px;
+
+            &_text {
+                width: 447px;
+            }
+        }
+    }
+
+    .title {
+        font-size: 38px;
+    }
+
+    .content {
+        padding-top: 44px;
+
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+    }
+}

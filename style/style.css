@@ -65,6 +65,9 @@
   align-items: center;
   padding-bottom: 29px;
 }
+.header-tablet {
+  display: none;
+}
 .header__wrapper {
   display: flex;
   gap: 42px;
@@ -138,10 +141,11 @@
   margin-bottom: 53px;
 }
 .content__cards {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   row-gap: 30px;
 }
 .content__button {
@@ -150,7 +154,6 @@
 }
 
 .card {
-  width: 320px;
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
@@ -217,4 +220,46 @@
   cursor: pointer;
   animation: pulse 1s;
   box-shadow: 0 0 0 2em transparent;
+}
+
+@media (max-width: 769px) {
+  .center {
+    padding-left: 49px;
+    padding-right: 49px;
+  }
+  .header {
+    display: none;
+  }
+  .header-tablet {
+    display: block;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .button-prime {
+    width: 201.5px;
+  }
+  .button-tablet {
+    width: 282.5px;
+  }
+  .top__content {
+    height: 907px;
+    padding-bottom: 76px;
+  }
+  .top__content_text {
+    width: 447px;
+  }
+  .title {
+    font-size: 38px;
+  }
+  .content {
+    padding-top: 44px;
+  }
+  .content__cards {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
