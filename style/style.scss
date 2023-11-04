@@ -131,6 +131,7 @@
 .button {
     transform: skewX(-15deg);
     flex-shrink: 0;
+    position: relative;
 
     &:hover, 
     &:focus {
@@ -140,7 +141,7 @@
     }
 
     &-prime {
-        width: 282.5px;
+        width: calc(282.5px - 32px);
         height: 60px;
         border: none;
         background-color: $button-main-background-color;
@@ -151,6 +152,18 @@
         font-weight: 700;
         line-height: 150%;
         text-transform: uppercase;
+        position: relative;
+        margin-right: 16px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px;
+            background-color: $card-background;
+            width: 6px;
+            height: 60px;
+        }
     }
 
     &__phone {

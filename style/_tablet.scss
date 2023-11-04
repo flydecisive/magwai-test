@@ -49,7 +49,7 @@
 
     .button {
         &-prime {
-            width: 201.5px;
+            width: calc(201.5px - 26px);
         }
 
         &-tablet {

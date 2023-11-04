@@ -118,6 +118,7 @@
 .button {
   transform: skewX(-15deg);
   flex-shrink: 0;
+  position: relative;
 }
 .button:hover, .button:focus {
   cursor: pointer;
@@ -125,7 +126,7 @@
   box-shadow: 0 0 0 2em transparent;
 }
 .button-prime {
-  width: 282.5px;
+  width: 250.5px;
   height: 60px;
   border: none;
   background-color: #C2AB81;
@@ -136,6 +137,17 @@
   font-weight: 700;
   line-height: 150%;
   text-transform: uppercase;
+  position: relative;
+  margin-right: 16px;
+}
+.button-prime::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  background-color: #FFF;
+  width: 6px;
+  height: 60px;
 }
 .button__phone {
   width: 92.5px;
@@ -279,7 +291,7 @@
     line-height: 150%;
   }
   .button-prime {
-    width: 201.5px;
+    width: 175.5px;
   }
   .button-tablet {
     width: 282.5px;
@@ -370,6 +382,10 @@
     width: 219.829px;
     height: 46.689px;
   }
+  .button__nav-mobile::after {
+    content: "";
+    display: none;
+  }
   .content {
     padding-top: 48px;
   }
@@ -381,5 +397,8 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 20px;
+  }
+  .content__button {
+    width: calc(100% - 32px);
   }
 }/*# sourceMappingURL=style.css.map */

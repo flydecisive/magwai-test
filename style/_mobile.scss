@@ -79,6 +79,15 @@
             width: 219.829px;
             height: 46.689px;
         }
+
+        &__nav {
+            &-mobile {
+                &::after {
+                    content: '';
+                    display: none;
+                }
+            }
+        }
     }
 
     .content {
@@ -93,6 +102,10 @@
             display: flex;
             flex-flow: column nowrap;
             gap: 20px;
+        }
+
+        &__button {
+            width: calc(100% - 32px);
         }
     }
     
