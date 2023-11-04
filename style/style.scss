@@ -4,3 +4,248 @@
     margin: 0;
     padding: 0;
 }
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 $button-main-background-color; }
+}
+
+.center {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.page {
+    background-color: $main-background-color;
+    max-width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 28px;
+    padding-bottom: 256px;
+}
+
+.top {
+    &__content {
+        width: 100%;
+        height: 960px;
+        background: url('../img/top.png') lightgray 50% / cover no-repeat;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        padding-bottom: 96px;
+        box-sizing: border-box;
+
+        &_wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 40px;
+        }
+
+        &_text {
+            color: $light-text-color;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; 
+            opacity: 0.79;
+        }
+    }
+}
+
+.title {
+    color: $light-text-color;
+    font-family: Montserrat;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 29px;
+
+    &__wrapper {
+        display: flex;
+        gap: 42px;
+        align-items: center;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 12.5px;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 42px;
+    align-items: center;
+    list-style-type: none;
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__item {
+        color: $light-text-color;
+        text-transform: uppercase;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+
+        &:hover {
+            transition: all .3s;
+            color: $nav-hover-text-color;
+        }
+    }
+}
+
+.button {
+    transform: skewX(-15deg);
+    flex-shrink: 0;
+
+    &:hover, 
+    &:focus {
+        cursor: pointer;
+        animation: pulse 1s;
+        box-shadow: 0 0 0 2em transparent;
+    }
+
+    &-prime {
+        width: 282.5px;
+        height: 60px;
+        border: none;
+        background-color: $button-main-background-color;
+        color: $light-text-color;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        text-transform: uppercase;
+    }
+
+    &__phone {
+        width: 92.5px;
+        height: 60px;      
+        background-color: transparent; 
+        border: 1px solid #FFF;
+    }
+}
+
+.content {
+    padding-top: 134px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+
+    &__title {
+        margin-bottom: 53px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between; 
+        width: 100%;
+        row-gap: 30px;
+    }
+
+    &__button {
+        margin-top: 60px;
+        align-self: center;
+    }
+}
+
+.card {
+    width: 320px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    background: $card-background;
+
+    &__img {
+        height: 185px;
+        width: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        padding: 25px 24px 30px 24px;
+        box-sizing: border-box;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        color: $card-heading-color;
+        font-family: Mulish;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 1.5px;
+    }
+
+    &__subheading {
+        color: $card-heading-color;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+    }
+
+    &__text {
+        color: $card-text-color;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    &__posted_data {        
+        color: $card-text-color;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        font-family: Montserrat;
+
+
+        &-bold {
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        height: 50px;
+        flex-shrink: 0;
+        background-color: $card-button-background-color;
+        color: $light-text-color;
+        border: none;
+        margin-top: 5px;
+
+        &:hover, 
+        &:focus {
+            cursor: pointer;
+            animation: pulse 1s;
+            box-shadow: 0 0 0 2em transparent;
+        }
+    }
+}
+
+
+
