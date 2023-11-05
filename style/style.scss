@@ -20,6 +20,7 @@
     min-height: 100vh;
     box-sizing: border-box;
     padding-bottom: 256px;
+    position: relative;
 }
 
 .top {
@@ -96,6 +97,11 @@
         height: 60px;
         flex-shrink: 0;
     }
+
+    &__logo {
+        width: 156.198px;
+        height: 60px;
+    }
 }
 
 .menu {
@@ -132,6 +138,10 @@
     transform: skewX(-15deg);
     flex-shrink: 0;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 
     &:hover, 
     &:focus {
@@ -203,6 +213,7 @@
     display: flex;
     flex-flow: column nowrap;
     background: $card-background;
+    min-height: 400px;
 
     &__img {
         height: 185px;
@@ -210,6 +221,7 @@
     }
 
     &__content {
+        height: 100%;
         display: flex;
         flex-flow: column nowrap;
         gap: 20px;
@@ -266,8 +278,16 @@
         flex-shrink: 0;
         background-color: $card-button-background-color;
         color: $light-text-color;
+        font-family: Mulish;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
         border: none;
-        margin-top: 5px;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover, 
         &:focus {
@@ -276,6 +296,84 @@
             box-shadow: 0 0 0 2em transparent;
         }
     }
+}
+
+.modal {
+    width: 400px;
+    height: 500px;
+    padding: 30px 25px;
+    border: 2px solid $button-main-background-color;
+    border-radius: 10px;
+    background-color: $main-background-color;
+    z-index: 7;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    margin-inline: auto;
+    inset-inline: 0;
+    inset-block-start: 50vh;
+    transform: translateY(-50%);
+
+    &__cross {
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        width: 30px;
+        height: 30px;
+        stroke: #fff;
+
+        &:hover {
+            cursor: pointer;
+            stroke: $button-main-background-color;
+        }
+    }
+
+    &__heading {
+        color: $light-text-color;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    &__input {
+        height: 30px;
+        padding: 0 10px 0 10px;
+    }
+
+    &__textarea {
+        padding: 10px;
+    }
+
+    &__input, &__textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid $light-text-color;
+        color: $dark-text-color;
+        font-family: Mulish;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $button-main-background-color;
+        }
+    }
+
+    &__button {
+        margin-top: auto;
+    }
+}
+
+.hidden {
+    display: none;
 }
 
 @import 'tablet';
