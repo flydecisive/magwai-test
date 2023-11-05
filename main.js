@@ -6,18 +6,80 @@ const imagesSrc = {
   4: "./img/cards/5.png",
 };
 
+const modalInputsState = {
+  name: "",
+  phone: "",
+  email: "",
+};
+
 getPosts();
 
 const burgerElems = document.querySelectorAll(".burger");
 const cardsContainer = document.querySelector(".content__cards");
 const contentButton = document.querySelector(".content__button");
+const appButtons = document.querySelectorAll(".button-app");
+const modalElem = document.querySelector(".modal");
+const modalButton = document.querySelector(".modal__button");
+const modalInputs = document.querySelectorAll(".modal__input");
+const crossElem = document.querySelector(".modal__cross");
 
-if (burgerElems) {
-  burgerElems.forEach((elem) =>
-    elem.addEventListener("click", (e) => {
-      handleBurgerClick(e);
-    })
-  );
+crossElem?.addEventListener("click", () => {
+  modalElem.classList.add("hidden");
+});
+
+modalButton?.addEventListener("click", () =>
+  handleModalButton(modalInputsState)
+);
+
+modalInputs?.forEach((elem) =>
+  elem.addEventListener("input", (e) => {
+    processingInputField(e);
+  })
+);
+
+appButtons?.forEach((elem) => {
+  elem.addEventListener("click", handleAppButtonClick);
+});
+
+burgerElems?.forEach((elem) =>
+  elem.addEventListener("click", (e) => {
+    handleBurgerClick(e);
+  })
+);
+
+function processingInputField(e) {
+  let target = e.target;
+
+  if (target.id === "name") {
+    modalInputsState.name = target.value;
+  } else if (target.id === "phone") {
+    target.value = target.value.replace(/[^0-9+]/g, "");
+    modalInputsState.phone = target.value;
+  } else if (target.id === "email") {
+    const emailRegex =
+      /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    if (emailRegex.test(target.value)) {
+      modalInputsState.email = target.value;
+    }
+  }
+}
+
+function handleModalButton({ name, phone, email }) {
+  if (name && phone && email) {
+    // Значиок отправлено и таймаут 1 сек
+    modalElem.classList.add("hidden");
+  } else {
+    alert("Заполните поля имя, email и телефон");
+  }
+}
+
+function handleAppButtonClick() {
+  modalElem.classList.remove("hidden");
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 }
 
 function handleBurgerClick(e) {

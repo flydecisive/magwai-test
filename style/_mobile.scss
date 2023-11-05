@@ -31,10 +31,6 @@
         }
     }
 
-    .hidden {
-        display: none;
-    }
-
     .top {
         &__content {
             height: 495px;
@@ -121,6 +117,23 @@
         &__button {
             width: calc(100% - 32px);
         }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .modal {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        box-sizing: border-box; 
+        margin-inline: 0;
+        inset-inline: 0;
+        inset-block-start: 0;
+        transform: none;
+        border-radius: 0;
     }
     
 }

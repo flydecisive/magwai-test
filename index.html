@@ -48,7 +48,7 @@
               <img src="./img/carbon_phone-filled.svg" alt="" />
             </a>
           </div>
-          <div class="button-prime button app-button">оставить заявку</div>
+          <div class="button-prime button button-app">оставить заявку</div>
         </div>
       </header>
 
@@ -65,7 +65,7 @@
               <img src="./img/carbon_phone-filled.svg" alt="" />
             </a>
           </div>
-          <div class="button-prime button app-button">оставить заявку</div>
+          <div class="button-prime button button-app">оставить заявку</div>
         </div>
         <nav class="nav center nav-tablet hidden">
           <ul class="nav__wrapper">
@@ -120,7 +120,7 @@
                 <img src="./img/carbon_phone-filled.svg" alt="" />
               </a>
             </div>
-            <div class="button-prime button button__nav-mobile app-button">
+            <div class="button-prime button button__nav-mobile button-app">
               оставить заявку
             </div>
           </div>
@@ -137,7 +137,7 @@
             В прошлый четверг все офигели от полета DOGIE COIN на марс.
           </p>
           <div
-            class="button-prime button button-tablet button-mobile app-button"
+            class="button-prime button button-tablet button-mobile button-app"
           >
             оставить заявку
           </div>
@@ -150,6 +150,38 @@
       <div class="content__cards"></div>
       <div class="button-prime button content__button">Загрузить еще</div>
     </main>
+
+    <div class="modal modal-tablet modal-mobile hidden">
+      <svg
+        class="modal__cross"
+        width="800px"
+        height="800px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 8L8 16M8.00001 8L16 16"
+          stroke="current"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <h2 class="modal__heading">Оставить заявку</h2>
+      <input class="modal__input" id="name" type="text" placeholder="Имя" />
+      <input class="modal__input" id="email" type="text" placeholder="email" />
+      <input class="modal__input" id="phone" placeholder="Телефон" />
+      <textarea
+        id="message"
+        class="modal__textarea"
+        maxlength="300"
+        cols="30"
+        rows="10"
+        placeholder="Сообщение"
+      ></textarea>
+      <div class="button-prime button modal__button">Отправить</div>
+    </div>
     <script src="./dist/main.js"></script>
   </body>
 </html>
