@@ -116,9 +116,6 @@
 
     &__link {
         text-decoration: none;
-    }
-
-    &__item {
         color: $light-text-color;
         text-transform: uppercase;
         font-family: Montserrat;
@@ -127,6 +124,13 @@
         font-weight: 700;
         line-height: 150%;
 
+        &:hover {
+            transition: all .3s;
+            color: $nav-hover-text-color;
+        }
+    }
+
+    &__item {
         &:hover {
             transition: all .3s;
             color: $nav-hover-text-color;

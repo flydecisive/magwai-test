@@ -105,8 +105,6 @@
 }
 .nav__link {
   text-decoration: none;
-}
-.nav__item {
   color: #FFF;
   text-transform: uppercase;
   font-family: Montserrat;
@@ -114,6 +112,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
+}
+.nav__link:hover {
+  transition: all 0.3s;
+  color: #C2AB81;
 }
 .nav__item:hover {
   transition: all 0.3s;
