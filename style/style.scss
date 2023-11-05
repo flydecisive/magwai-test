@@ -133,14 +133,14 @@
     }
 }
 
-.hidden {
-    display: none;
-}
-
 .button {
     transform: skewX(-15deg);
     flex-shrink: 0;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 
     &:hover, 
     &:focus {
@@ -212,6 +212,7 @@
     display: flex;
     flex-flow: column nowrap;
     background: $card-background;
+    min-height: 400px;
 
     &__img {
         height: 185px;
@@ -219,6 +220,7 @@
     }
 
     &__content {
+        height: 100%;
         display: flex;
         flex-flow: column nowrap;
         gap: 20px;
@@ -275,8 +277,17 @@
         flex-shrink: 0;
         background-color: $card-button-background-color;
         color: $light-text-color;
+        font-family: Mulish;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
         border: none;
-        margin-top: 5px;
+        // margin-top: 5px;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover, 
         &:focus {
@@ -285,6 +296,10 @@
             box-shadow: 0 0 0 2em transparent;
         }
     }
+}
+
+.hidden {
+    display: none;
 }
 
 @import 'tablet';

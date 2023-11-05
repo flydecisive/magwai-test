@@ -38,6 +38,13 @@
         background-color: $main-background-color;
         z-index: 3;
 
+        &__wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 15px;
+            list-style-type: none;
+        }
+
         &__item {
             font-family: Montserrat;
             font-size: 36px;
