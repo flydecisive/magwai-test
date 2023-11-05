@@ -1,10 +1,10 @@
 # Тестовое задание в компанию Магвай
 
-## Используемые технологии
-### HTML, SCSS, JavaScript, Webpack
+### Используемые технологии
+***HTML, SCSS, JavaScript, Webpack***
 
-## Ссылка на готовый проект
-### https://flydecisive.github.io/magwai-test/
+### Ссылка на готовый проект
+[Текст ссылки]([https://путь/к/ссылке](https://flydecisive.github.io/magwai-test/))
 
-## Затраченное время
-### ~15 часов
+### Затраченное время
+***~15 часов***
